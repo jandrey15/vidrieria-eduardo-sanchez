@@ -1,0 +1,17 @@
+{
+  "name": "vidrieria-site",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "main": "index.js",
+  "author": "John Andrey <andrey_201015@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "next": "9.0.4",
+    "react": "16.9.0",
+    "react-dom": "16.9.0"
+  }
+}
