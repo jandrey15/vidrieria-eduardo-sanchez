@@ -6,7 +6,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "standard --fix"
-  },  
+  },
   "standard": {
     "parser": "babel-eslint"
   },
@@ -15,9 +15,11 @@
   "author": "John Andrey <andrey_201015@hotmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@zeit/next-css": "1.0.1",
     "next": "9.0.4",
     "react": "16.9.0",
-    "react-dom": "16.9.0"
+    "react-dom": "16.9.0",
+    "react-slick": "0.25.2"
   },
   "devDependencies": {
     "babel-eslint": "10.0.1",
