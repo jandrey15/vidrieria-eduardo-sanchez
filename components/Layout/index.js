@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Head from 'next/head'
-import Header from './Header'
+import Header from '../Header'
+import globalStyles from '../GlobalStyles'
 
 class Layout extends Component {
   render () {
@@ -22,6 +23,7 @@ class Layout extends Component {
         <Header />
         {children}
 
+        <style jsx global>{globalStyles}</style>
       </div>
     )
   }

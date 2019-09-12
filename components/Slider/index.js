@@ -5,7 +5,7 @@ import './styles.css'
 import './styles-theme.css'
 // Site oficial -> https://react-slick.neostack.com/
 
-export default class SliderItems extends Component {
+class SliderItems extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -59,3 +59,5 @@ export default class SliderItems extends Component {
     )
   }
 }
+
+export default SliderItems
