@@ -5,6 +5,28 @@ import './styles.css'
 import './styles-theme.css'
 // Site oficial -> https://react-slick.neostack.com/
 
+function SampleNextArrow (props) {
+  const { className, style, onClick } = props
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: 'none' }}
+      onClick={onClick}
+    />
+  )
+}
+
+function SamplePrevArrow (props) {
+  const { className, style, onClick } = props
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: 'none' }}
+      onClick={onClick}
+    />
+  )
+}
+
 class SliderItems extends Component {
   constructor (props) {
     super(props)
@@ -36,10 +58,14 @@ class SliderItems extends Component {
   render () {
     const settings = {
       dots: true,
+      fade: true,
       infinite: true,
       speed: 500,
-      slidesToShow: 3,
-      slidesToScroll: 3
+      autoplay: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      nextArrow: <SampleNextArrow />,
+      prevArrow: <SamplePrevArrow />
     }
 
     return (
@@ -49,7 +75,7 @@ class SliderItems extends Component {
           {this.state.images.map((image, index) => {
             console.log(image)
             return (
-              <div style={{ width: 320 }} key={index}>
+              <div key={index}>
                 <img src={image} alt={`image-${index}`} />
               </div>
             )
