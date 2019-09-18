@@ -42,10 +42,11 @@ class SliderItems extends Component {
       .then(res => res.json())
       .then(data => {
         // console.log(data)
+        // image.urls.regular -> small, full
         let images = []
         data.map(image => {
-          // console.log(image.urls.regular);
-          images.push(image.urls.small)
+          // console.log(image.urls.full);
+          images.push(image.urls.regular)
         })
 
         this.setState({
