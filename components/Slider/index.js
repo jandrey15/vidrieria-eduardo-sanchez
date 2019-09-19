@@ -37,7 +37,7 @@ class SliderItems extends Component {
 
   componentDidMount () {
     fetch(
-      'https://api.unsplash.com/photos/?client_id=77a52921a8e2c2d2b5b789c1dc29148144eceb99a29c40780a2b6b92c12ed7bc&per_page=9'
+      'https://api.unsplash.com/photos/?client_id=77a52921a8e2c2d2b5b789c1dc29148144eceb99a29c40780a2b6b92c12ed7bc&per_page=4'
     )
       .then(res => res.json())
       .then(data => {
