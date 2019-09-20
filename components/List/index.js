@@ -27,7 +27,7 @@ class List extends Component {
     const { data } = this.state
     return (
       <section id='List'>
-        <ul className='container'>
+        <ul>
           {data.map(item => {
             return (
               <li key={item.id}>
