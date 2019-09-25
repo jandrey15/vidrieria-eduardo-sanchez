@@ -61,8 +61,9 @@ class SliderItems extends Component {
       dots: true,
       fade: true,
       infinite: true,
-      speed: 500,
       autoplay: true,
+      autoplaySpeed: 2000,
+      pauseOnHover: true,
       slidesToShow: 1,
       slidesToScroll: 1,
       nextArrow: <SampleNextArrow />,
@@ -74,7 +75,6 @@ class SliderItems extends Component {
         <h2> Multiple items </h2>
         <Slider {...settings}>
           {this.state.images.map((image, index) => {
-            console.log(image)
             return (
               <div key={index}>
                 <img src={image} alt={`image-${index}`} />
