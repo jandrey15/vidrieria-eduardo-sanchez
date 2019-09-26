@@ -60,7 +60,7 @@
 }
 
 .slick-prev {
-  left: 0px;
+  left: 10px;
   z-index: 10;
 }
 /* [dir="rtl"] .slick-prev {
@@ -68,17 +68,17 @@
   left: auto;
 } */
 .slick-prev:before {
-  content: "<";
+  content: "\02C2";
   color: #ffffff;
 }
 
 .slick-next {
-  right: 0px;
+  right: 10px;
   z-index: 10;
 }
 
 .slick-next:before {
-  content: ">";
+  content: "\02C3";
   color: #ffffff;
 }
 /* Dots */

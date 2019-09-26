@@ -73,11 +73,11 @@
   height: 180px;
 }
 .slick-arrow {
-  background-color: grey;
+  background-color: #b1b1b1;
   /* color: black; */
 }
 .slick-arrow:hover {
-  background-color: grey;
+  background-color: #b1b1b1;
 }
 /* .slick-prev {
   z-index: 100;

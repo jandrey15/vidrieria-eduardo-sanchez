@@ -1,10 +1,10 @@
 import css from 'styled-jsx/css'
 
 export default css.global`
-  @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap');
   body {
     /* font-family: 'Oswald', system-ui, sans-serif; */
-    font-family: 'Source Sans Pro', system-ui, sans-serif;
+    font-family: 'Roboto', system-ui, sans-serif;
     font-size: 16px;
     font-weight: 400;
     color: #1c1c1c;
