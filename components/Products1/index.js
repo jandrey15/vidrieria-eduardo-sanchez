@@ -34,11 +34,16 @@ export default class MultipleItems extends Component {
 
   render () {
     const settings = {
-      dots: true,
+      className: 'center',
       infinite: true,
-      speed: 500,
-      slidesToShow: 3,
-      slidesToScroll: 3
+      centerPadding: '60px',
+      slidesToShow: 2,
+      swipeToSlide: true,
+      afterChange: function (index) {
+        console.log(
+          `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
+        )
+      }
     }
 
     return (
@@ -53,6 +58,13 @@ export default class MultipleItems extends Component {
             )
           })}
         </Slider>
+        <style jsx>{`
+          .slider-items {
+            margin: 0 auto;
+            max-width: 1000px;
+            width: 100%;
+          }  
+        `}</style>
       </div>
     )
   }
