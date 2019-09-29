@@ -72,7 +72,6 @@ class SliderItems extends Component {
 
     return (
       <div className='slider-items'>
-        <h2> Multiple items </h2>
         <Slider {...settings}>
           {this.state.images.map((image, index) => {
             return (

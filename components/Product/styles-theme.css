@@ -8,7 +8,7 @@
   line-height: 0;
 
   position: absolute;
-  top: 50%;
+  top: 105%;
 
   display: block;
 
@@ -60,7 +60,7 @@
 }
 
 .slick-prev {
-  left: 10px;
+  left: 45%;
   z-index: 10;
 }
 /* [dir="rtl"] .slick-prev {
@@ -69,17 +69,17 @@
 } */
 .slick-prev:before {
   content: "\02C2";
-  color: #ffffff;
+  color: gray;
 }
 
 .slick-next {
-  right: 10px;
+  right: 45%;
   z-index: 10;
 }
 
 .slick-next:before {
   content: "\02C3";
-  color: #ffffff;
+  color: gray;
 }
 /* Dots */
 .slick-dotted.slick-slider {
