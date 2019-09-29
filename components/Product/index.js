@@ -30,6 +30,10 @@ const Product = ({ images, title }) => {
           )
         })}
       </Slider>
+      <div className='contact'>
+        <i className='wp' />
+        <span>Cotizar</span>
+      </div>
       <style jsx>{`
         .slider-items {
           margin: 30px auto 50px;
@@ -41,6 +45,26 @@ const Product = ({ images, title }) => {
           font-size: 1.6rem;
           text-transform: uppercase;
           color: ${red};
+        }
+        .contact {
+          display: flex;
+          align-items: center;
+          background: #50b154;
+          padding: 5px;
+          border-radius: 2px;
+          width: 130px;
+          justify-content: space-evenly;
+          cursor: pointer;
+        }
+        .wp {
+          background: url('/static/wp.png') no-repeat;
+          height: 32px;
+          display: block;
+          width: 32px;
+        }
+        span {
+          text-transform: uppercase;
+          color: #ffffff;
         }
       `}</style>
     </div>
