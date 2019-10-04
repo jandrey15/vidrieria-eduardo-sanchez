@@ -1,9 +1,9 @@
 import css from 'styled-jsx/css'
-import { gray } from '../GlobalStyles/colores'
+import { colors } from '../GlobalStyles/colores'
 
 export default css`
   #Header {
-    background: ${gray};
+    background: ${colors.gray};
     height: 50px;
     display: flex;
     align-items: center;

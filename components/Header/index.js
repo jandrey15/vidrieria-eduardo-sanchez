@@ -1,4 +1,5 @@
 import styles from './styles'
+import { Link } from 'react-scroll'
 
 const Header = () => {
   return (
@@ -8,11 +9,54 @@ const Header = () => {
 
         <div className='menu'>
           <ul>
-            <li><a href='#' rel='noopener noreferrer'>Products</a></li>
-            <li><a href='#' rel='noopener noreferrer'>Products 1</a></li>
-            <li><a href='#' rel='noopener noreferrer'>Products 2</a></li>
-            <li><a href='#' rel='noopener noreferrer'>Products 3</a></li>
-            <li><a href='#' rel='noopener noreferrer'>Products 4</a></li>
+            <li>
+              <Link
+                activeClass='active'
+                to='product-0'
+                spy
+                smooth
+                offset={-70}
+                duration={500}
+              >
+                Products
+              </Link>
+            </li>
+            <li>
+              <Link
+                activeClass='active'
+                to='product-1'
+                spy
+                smooth
+                offset={-70}
+                duration={500}
+              >
+                Products 1
+              </Link>
+            </li>
+            <li>
+              <Link
+                activeClass='active'
+                to='product-2'
+                spy
+                smooth
+                offset={-70}
+                duration={500}
+              >
+                Products 2
+              </Link>
+            </li>
+            <li>
+              <Link
+                activeClass='active'
+                to='product-3'
+                spy
+                smooth
+                offset={-70}
+                duration={500}
+              >
+                Products 3
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

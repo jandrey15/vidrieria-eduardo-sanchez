@@ -2,9 +2,9 @@ import React from 'react'
 import Slider from 'react-slick'
 import './styles.css'
 import './styles-theme.css'
-import { red } from '../GlobalStyles/colores'
+import { colors } from '../GlobalStyles/colores'
 
-const Product = ({ images, title }) => {
+const Product = ({ images, title, item }) => {
   const settings = {
     className: 'center',
     infinite: true,
@@ -19,7 +19,7 @@ const Product = ({ images, title }) => {
   }
 
   return (
-    <div className='slider-items'>
+    <div id={`product-${item}`} className='slider-items'>
       <h2>{title}</h2>
       <Slider {...settings}>
         {images.map((image, index) => {
@@ -44,7 +44,7 @@ const Product = ({ images, title }) => {
           text-align: center;
           font-size: 1.6rem;
           text-transform: uppercase;
-          color: ${red};
+          color: ${colors.red};
         }
         .contact {
           display: flex;

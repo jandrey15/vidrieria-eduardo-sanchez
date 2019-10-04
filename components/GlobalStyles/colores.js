@@ -1,4 +1,6 @@
-export const blue = '#3498db'
-export const red = '#e74c3c'
-export const gray = '#bdc3c7'
-export const blueStrong = '#34495e'
+export const colors = {
+  blue: '#3498db',
+  red: '#e74c3c',
+  gray: '#bdc3c7',
+  blueStrong: '#34495e'
+}

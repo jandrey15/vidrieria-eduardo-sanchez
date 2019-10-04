@@ -1,9 +1,9 @@
 import css from 'styled-jsx/css'
-import { blueStrong } from '../GlobalStyles/colores'
+import { colors } from '../GlobalStyles/colores'
 
 export default css`
   #Footer {
-    background: ${blueStrong};
+    background: ${colors.blueStrong};
     height: 150px;
     display: flex;
     align-items: center;

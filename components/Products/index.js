@@ -34,10 +34,10 @@ export default class MultipleItems extends Component {
     const { images } = this.state
     const { item } = this.props
 
-    if (item === 1) return <Product images={images} title='List products 1' />
-    if (item === 2) return <Product images={images} title='List products 2' />
-    if (item === 3) return <Product images={images} title='List products 2' />
+    if (item === 1) return <Product images={images} title='List products 1' item={item} />
+    if (item === 2) return <Product images={images} title='List products 2' item={item} />
+    if (item === 3) return <Product images={images} title='List products 2' item={item} />
 
-    return <Product images={images} title='List products' />
+    return <Product images={images} title='List products' item={0} />
   }
 }
