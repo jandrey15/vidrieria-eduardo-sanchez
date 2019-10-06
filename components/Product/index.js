@@ -32,7 +32,7 @@ const Product = ({ images, title, item }) => {
       </Slider>
       <div className='contact'>
         <i className='wp' />
-        <span>Cotizar</span>
+        <span><a href={`https://api.whatsapp.com/send?phone=57 3115055761&text=Quiero cotizar los ${title}`} target='_blank'>Cotizar</a></span>
       </div>
       <style jsx>{`
         .slider-items {
@@ -44,7 +44,7 @@ const Product = ({ images, title, item }) => {
           text-align: center;
           font-size: 1.6rem;
           text-transform: uppercase;
-          color: ${colors.red};
+          color: ${colors.blackGray};
         }
         .contact {
           display: flex;
@@ -64,6 +64,10 @@ const Product = ({ images, title, item }) => {
         }
         span {
           text-transform: uppercase;
+          color: #ffffff;
+        }
+        span a {
+          text-decoration: none;
           color: #ffffff;
         }
       `}</style>

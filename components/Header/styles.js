@@ -3,13 +3,19 @@ import { colors } from '../GlobalStyles/colores'
 
 export default css`
   #Header {
-    background: ${colors.gray};
+    background: ${colors.blackGray};
     height: 50px;
     display: flex;
     align-items: center;
+    color: #ffffff;
   }
   .container h3 {
     margin: 0;
+  }
+
+  h3 a {
+    text-decoration: none;
+    color: #ffffff;
   }
   .container {
     display: flex;
@@ -24,11 +30,7 @@ export default css`
     list-style: none;
     padding: 0;
   }
-  a {
-    text-decoration: none;
-    color: #333333;
-  }
-  a:hover {
-    text-decoration: underline;
+  .menu li {
+    cursor: pointer;
   }
 `

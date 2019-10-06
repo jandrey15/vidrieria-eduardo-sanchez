@@ -31,6 +31,11 @@ export default css.global`
     margin: 0;
     object-fit: contain;
   }
+
+  
+  #Header .menu li a:hover {
+    text-decoration: underline;
+  }
   
   /* Make clicks pass-through */
   #nprogress {
