@@ -4,6 +4,7 @@ export default css`
   #List {
     position: relative;
     top: -3px;
+    margin-bottom: 30px;
   }
   
   ul {

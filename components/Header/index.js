@@ -1,5 +1,5 @@
 import styles from './styles'
-import Link  from 'next/link'
+import Link from 'next/link'
 import { Link as Linkscroll } from 'react-scroll'
 
 const Header = () => {

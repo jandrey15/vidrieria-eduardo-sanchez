@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import Slider from 'react-slick'
 import AOS from 'aos'
 import './styles.css'
@@ -7,11 +7,33 @@ import './aos.css'
 import { colors } from '../GlobalStyles/colores'
 
 const Product = ({ images, title, item }) => {
+  const element = useRef(null)
+  const [show, setShow] = useState(false)
+
+  useEffect(function () {
+    Promise.resolve(
+      typeof window.IntersectionObserver !== 'undefined'
+        ? window.IntersectionObserver
+        : import('intersection-observer')
+    ).then(() => {
+      const observer = new window.IntersectionObserver(function (entries) {
+        const { isIntersecting } = entries[0]
+        if (isIntersecting) {
+          setShow(true)
+          observer.disconnect()
+        }
+      })
+      observer.observe(element.current)
+    })
+  }, [element])
+
   useEffect(() => {
     AOS.init({
       once: false
     })
   }, []) // [] Solo se ejecuta una sola vez
+
+  // Reglas del los Hooks -> https://es.reactjs.org/docs/hooks-rules.html
 
   const settings = {
     className: 'center',
@@ -27,27 +49,35 @@ const Product = ({ images, title, item }) => {
   }
 
   return (
-    <div id={`product-${item}`} className='slider-items' data-aos='fade-up'>
-      <h2>{title}</h2>
-      <Slider {...settings}>
-        {images.map((image, index) => {
-          return (
-            <div key={index}>
-              <img src={image} alt={`image-${index}`} />
-            </div>
-          )
-        })}
-      </Slider>
-      <a href={`https://api.whatsapp.com/send?phone=57 3115055761&text=Quiero cotizar los ${title}`} target='_blank'>
-        <div className='contact'>
-          <i className='wp' />
-          <span>Cotizar</span>
-        </div>
-      </a>
+    <article ref={element} id={`product-${item}`} className='slider-items' data-aos='fade-up'>
+      {
+        show && (
+          <>
+            <h2>{title}</h2>
+            <Slider {...settings}>
+              {images.map((image, index) => {
+                return (
+                  <div key={index}>
+                    <img src={image} alt={`image-${index}`} />
+                  </div>
+                )
+              })}
+            </Slider>
+            <a href={`https://api.whatsapp.com/send?phone=57 3115055761&text=Quiero cotizar los ${title}`} target='_blank'>
+              <div className='contact'>
+                <i className='wp' />
+                <span>Cotizar</span>
+              </div>
+            </a>
+
+          </>
+        )
+      }
       <style jsx>{`
         .slider-items {
           margin: 30px auto 50px;
           max-width: 1000px;
+          min-height: 600px;
           width: 100%;
         }
         h2 {
@@ -79,9 +109,11 @@ const Product = ({ images, title, item }) => {
         a {
           text-decoration: none;
           color: #ffffff;
+          display: block;
+          width: 140px;
         }
       `}</style>
-    </div>
+    </article>
   )
 }
 
