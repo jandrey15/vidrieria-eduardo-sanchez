@@ -12,6 +12,7 @@ export default css`
   .container h3 {
     margin: 0;
     color: #ffffff;
+    margin-bottom: 10px;
   }
   p {
     color: #ffffff;

@@ -38,7 +38,32 @@ const Product = ({ images, title, item }) => {
     infinite: true,
     centerPadding: '60px',
     slidesToShow: 2,
-    swipeToSlide: true
+    swipeToSlide: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
     // afterChange: function (index) {
     //   console.log(
     //     `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
@@ -82,6 +107,7 @@ const Product = ({ images, title, item }) => {
           font-size: 1.6rem;
           text-transform: uppercase;
           color: ${colors.blackGray};
+          margin-bottom: 20px;
         }
         .contact {
           display: flex;
@@ -108,6 +134,10 @@ const Product = ({ images, title, item }) => {
           color: #ffffff;
           display: block;
           width: 140px;
+        }
+
+        @media screen and (max-width: 768px) {
+          a { margin-left: 5px; }
         }
       `}</style>
     </section>

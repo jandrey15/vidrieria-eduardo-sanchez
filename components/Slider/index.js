@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import Slider from 'react-slick'
 // Doc: https://react-slick.neostack.com/docs/get-started
-import './styles.css'
-import './styles-theme.css'
+// import './styles.css'
+// import './styles-theme.css'
 // Site oficial -> https://react-slick.neostack.com/
 
 function SampleNextArrow (props) {
@@ -71,7 +71,7 @@ class SliderItems extends Component {
     }
 
     return (
-      <div className='slider-items'>
+      <div className='Slides__main'>
         <Slider {...settings}>
           {this.state.images.map((image, index) => {
             return (
@@ -81,6 +81,11 @@ class SliderItems extends Component {
             )
           })}
         </Slider>
+        <style jsx>{`
+          .Slides__main {
+            min-height: 482px;
+          }
+        `}</style>
       </div>
     )
   }

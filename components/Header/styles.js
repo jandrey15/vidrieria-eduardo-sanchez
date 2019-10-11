@@ -25,12 +25,39 @@ export default css`
 
   .menu ul {
     display: grid;
-    grid-template-columns: repeat(5, 110px);
+    grid-template-columns: repeat(4, 110px);
     justify-items: center;
     list-style: none;
     padding: 0;
   }
   .menu li {
     cursor: pointer;
+  }
+
+  @media screen and (max-width: 768px) {
+    #Header {
+      height: auto;
+      padding: 20px 0 10px;
+    }
+
+    #Header .container {
+      flex-direction: column;
+    }
+
+    .menu {
+      margin-top: 5px;
+      width: 100%;
+    }
+
+    .menu ul {
+      display: flex;
+      align-items: center;
+      overflow: auto;
+      white-space: nowrap;
+      height: 30px;
+    }
+    .menu li {
+      padding: 0 8px;
+    }
   }
 `
