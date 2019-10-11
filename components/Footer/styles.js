@@ -3,8 +3,8 @@ import { colors } from '../GlobalStyles/colores'
 
 export default css`
   #Footer {
-    background: ${colors.blueStrong};
-    height: 150px;
+    background: ${colors.black};
+    height: 200px;
     display: flex;
     align-items: center;
     margin-top: 50px;

@@ -3,7 +3,7 @@ import { colors } from '../GlobalStyles/colores'
 
 export default css`
   #Header {
-    background: ${colors.blackGray};
+    background: ${colors.blueStrong};
     height: 50px;
     display: flex;
     align-items: center;

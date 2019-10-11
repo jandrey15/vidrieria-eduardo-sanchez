@@ -28,9 +28,7 @@ const Product = ({ images, title, item }) => {
   }, [element])
 
   useEffect(() => {
-    AOS.init({
-      once: false
-    })
+    AOS.init()
   }, []) // [] Solo se ejecuta una sola vez
 
   // Reglas del los Hooks -> https://es.reactjs.org/docs/hooks-rules.html
@@ -49,10 +47,10 @@ const Product = ({ images, title, item }) => {
   }
 
   return (
-    <article ref={element} id={`product-${item}`} className='slider-items' data-aos='fade-up'>
+    <section ref={element} id={`product-${item}`} className='slider-items'>
       {
         show && (
-          <>
+          <article data-aos='fade-up'>
             <h2>{title}</h2>
             <Slider {...settings}>
               {images.map((image, index) => {
@@ -69,8 +67,7 @@ const Product = ({ images, title, item }) => {
                 <span>Cotizar</span>
               </div>
             </a>
-
-          </>
+          </article>
         )
       }
       <style jsx>{`
@@ -113,7 +110,7 @@ const Product = ({ images, title, item }) => {
           width: 140px;
         }
       `}</style>
-    </article>
+    </section>
   )
 }
 
