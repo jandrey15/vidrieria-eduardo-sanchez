@@ -1,9 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react'
 import Slider from 'react-slick'
 import AOS from 'aos'
-import './styles.css'
-import './styles-theme.css'
-import './aos.css'
 import { colors } from '../GlobalStyles/colores'
 
 const Product = ({ images, title, item }) => {

@@ -1,8 +1,25 @@
 import React, { Component } from 'react'
 import Head from 'next/head'
+import NProgress from 'nprogress'
+import Router from 'next/router'
+import * as gtag from '../../helpers/gtag'
 import Header from '../Header'
 import Footer from '../Footer'
 import globalStyles from '../GlobalStyles'
+
+Router.onRouteChangeStart = () => {
+  NProgress.start()
+}
+
+Router.onRouteChangeComplete = url => {
+  NProgress.done()
+  const NODE_ENV = process.env.NODE_ENV
+  if (NODE_ENV !== 'development') {
+    gtag.trackPageView(url)
+  }
+}
+
+Router.onRouteChangeError = () => NProgress.done()
 
 class Layout extends Component {
   render () {

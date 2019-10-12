@@ -13,18 +13,6 @@ const Header = () => {
             <li>
               <Linkscroll
                 activeClass='active'
-                to='product-0'
-                spy
-                smooth
-                offset={-70}
-                duration={500}
-              >
-                Products
-              </Linkscroll>
-            </li>
-            <li>
-              <Linkscroll
-                activeClass='active'
                 to='product-1'
                 spy
                 smooth
@@ -56,6 +44,18 @@ const Header = () => {
                 duration={500}
               >
                 Products 3
+              </Linkscroll>
+            </li>
+            <li>
+              <Linkscroll
+                activeClass='active'
+                to='product-4'
+                spy
+                smooth
+                offset={-70}
+                duration={500}
+              >
+                Products 4
               </Linkscroll>
             </li>
           </ul>

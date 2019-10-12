@@ -19,6 +19,7 @@
     "aos": "3.0.0-beta.6",
     "intersection-observer": "0.7.0",
     "next": "9.0.4",
+    "nprogress": "^0.2.0",
     "react": "16.9.0",
     "react-dom": "16.9.0",
     "react-scroll": "1.7.14",

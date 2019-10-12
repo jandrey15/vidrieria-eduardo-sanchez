@@ -32,12 +32,14 @@ export default class MultipleItems extends Component {
 
   render () {
     const { images } = this.state
-    const { item } = this.props
+    const { products } = this.props
 
-    if (item === 1) return <Product images={images} title='List products 1' item={item} />
-    if (item === 2) return <Product images={images} title='List products 2' item={item} />
-    if (item === 3) return <Product images={images} title='List products 2' item={item} />
-
-    return <Product images={images} title='List products' item={0} />
+    return <section id='Products'>
+      {
+        products.map(item => {
+          return <Product key={item} images={images} title={`List products ${item}`} item={item} />
+        })
+      }
+    </section>
   }
 }

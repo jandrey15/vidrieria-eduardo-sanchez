@@ -10,10 +10,7 @@ class Home extends Component {
       <Layout>
         <Slider />
         <List />
-        <Products />
-        <Products item={1} />
-        <Products item={2} />
-        <Products item={3} />
+        <Products products={[1, 2, 3, 4]} />
       </Layout>
     )
   }

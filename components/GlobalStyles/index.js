@@ -1,4 +1,7 @@
 import css from 'styled-jsx/css'
+import stylesTheme from './styles-theme'
+import styles from './styles'
+import aos from './aos'
 
 export default css.global`
   @import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap');
@@ -6,6 +9,9 @@ export default css.global`
   ul, li, h1, h2, h3, p, button { margin: 0; padding: 0; }
   ul { list-style: none; }
   button { background: transparent; border: 0; outline: 0 }
+  ${styles}
+  ${stylesTheme}
+  ${aos}
   
   body {
     /* font-family: 'Oswald', system-ui, sans-serif; */
@@ -111,18 +117,6 @@ export default css.global`
       transform: rotate(360deg);
     }
   }
-  /* @media screen and (max-width: 1024px) {
-    .text img,
-    .text figure img,
-    .text .instagram-media,
-    .text iframe,
-    .text figure {
-      width: 100% !important;
-      margin: 0 auto;
-      height: auto;
-      object-fit: none;
-    }
-  } */
   /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
   button,
   hr,
