@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { SEO } from '../SEO'
 import Layout from '../components/Layout'
 import Slider from '../components/Slider'
 import List from '../components/List'
@@ -8,6 +9,7 @@ class Home extends Component {
   render () {
     return (
       <Layout>
+        <SEO title='Home page' location='/' type='Organization' />
         <Slider />
         <List />
         <Products products={[1, 2, 3, 4]} />

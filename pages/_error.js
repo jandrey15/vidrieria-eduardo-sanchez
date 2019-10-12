@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import Layout from '../components/Layout'
 import Link from 'next/link'
+import { SEO } from '../SEO'
+import Layout from '../components/Layout'
 
 export default class Error extends Component {
   static getInitialProps ({ res, err }) {
@@ -13,7 +14,8 @@ export default class Error extends Component {
     let title = `Eduardo Sanchez - ${statusCode}`
 
     return (
-      <Layout title={title}>
+      <Layout>
+        <SEO title={title} location='/' type='Organization' />
         <section id='Error'>
           {statusCode === 404 ? (
             <div className='message'>
