@@ -9,7 +9,7 @@ class Home extends Component {
   render () {
     return (
       <Layout>
-        <SEO title='Home page' location='/' type='Organization' />
+        <SEO location='/' type='Organization' />
         <Slider />
         <List />
         <Products products={[1, 2, 3, 4]} />

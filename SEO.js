@@ -41,7 +41,7 @@ export const SEO = ({
       "@id": "https://google.com/article"
     },
     "headline": "${description}",
-    "image": "${cover ? `https://smakosh.com${cover}` : `https://smakosh.com${Thumbnail}`}",
+    "image": "${cover ? `https://eduardosanchez.com${cover}` : `https://eduardosanchez.com${Thumbnail}`}",
     "datePublished": "${datePublished}",
     "dateModified": "${dateModified}",
     "author": {
@@ -108,14 +108,14 @@ export const SEO = ({
       />
 
       {/* Opengraph meta tags for Facebook & LinkedIn */}
-      <meta property='og:url' content={`${url}${location}/?ref=smakosh.com`} />
+      <meta property='og:url' content={`${url}${location}/?ref=eduardosanchez.com`} />
       <meta
         property='og:type'
         content={type === 'NewsArticle' ? 'NewsArticle' : 'website'}
       />
       <meta
         property='og:title'
-        content={title ? `Smakosh | ${title}` : defaultTitle}
+        content={title ? `Eduardo Sanchez | ${title}` : defaultTitle}
       />
       <meta
         property='og:description'
@@ -135,7 +135,7 @@ export const SEO = ({
       <meta name='twitter:site' content={social.twitter} />
       <meta
         name='twitter:title'
-        content={title ? `Smakosh | ${title}` : defaultTitle}
+        content={title ? `Eduardo | ${title}` : defaultTitle}
       />
       <meta
         name='twitter:description'
@@ -173,7 +173,7 @@ export const SEO = ({
       <link rel='publisher' href={socialLinks.google} />
 
       {/* The title of your current page */}
-      <title>{title ? `Eduardo | ${title}` : defaultTitle}</title>
+      <title>{title ? `Eduardo Sanchez | ${title}` : defaultTitle}</title>
 
       {/* Default language and direction */}
       <html lang='en' dir='ltr' />
