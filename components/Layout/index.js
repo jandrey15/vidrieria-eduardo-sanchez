@@ -6,6 +6,7 @@ import * as gtag from '../../helpers/gtag'
 import Header from '../Header'
 import Footer from '../Footer'
 import globalStyles from '../GlobalStyles'
+import aos from '../GlobalStyles/aos'
 
 Router.onRouteChangeStart = () => {
   NProgress.start()
@@ -40,6 +41,7 @@ class Layout extends Component {
         <Footer />
 
         <style jsx global>{globalStyles}</style>
+        <style jsx global>{aos}</style>
       </div>
     )
   }

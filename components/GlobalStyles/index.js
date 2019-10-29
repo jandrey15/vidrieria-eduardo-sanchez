@@ -1,7 +1,4 @@
 import css from 'styled-jsx/css'
-// import stylesTheme from './styles-theme'
-// import styles from './styles'
-import aos from './aos'
 
 export default css.global`
   @import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap');
@@ -9,8 +6,6 @@ export default css.global`
   ul, li, h1, h2, h3, p, button { margin: 0; padding: 0; }
   ul { list-style: none; }
   button { background: transparent; border: 0; outline: 0 }
-
-  ${aos}
   
   body {
     /* font-family: 'Oswald', system-ui, sans-serif; */
